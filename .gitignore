@@ -1,0 +1,9 @@
+*~
+*.glob
+*.aux
+*.vo
+*.vok
+*.vos
+node_modules
+*.html
+coqdoc.css
