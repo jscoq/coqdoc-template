@@ -1,8 +1,11 @@
 .PHONY: all clean serve
 
-FILES=lesson_1 lesson_2
+COQDOC_AUTO=coqdoc.css
 
-all: $(addsuffix .html,$(FILES))
+FILES=lesson_1 lesson_2
+FILES_HTML=$(addsuffix .html,$(FILES))
+
+all: $(FILES_HTML)
 
 %.html: %.v %.glob
 	./jscoqdoc $<
@@ -11,7 +14,7 @@ all: $(addsuffix .html,$(FILES))
 	coqc $<
 
 clean:
-	rm -f *.vo *.vok .*.aux *.glob *.vos
+	rm -f *.vo *.vok .*.aux *.glob *.vos $(FILES_HTML) $(COQDOC_AUTO)
 
 node_modules: package.json package-lock.json
 	npm i
