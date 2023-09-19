@@ -5,6 +5,10 @@ Set Implicit Arguments.
 Unset Strict Implicit.
 Unset Printing Implicit Defensive.
 
+From MyCourse Require Import lesson_1.
+
+About x_implies_x.
+
 Definition sorry {T} : T. Admitted.
 (** ** Reflection and proving with computation
 
