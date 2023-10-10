@@ -11,7 +11,9 @@ In this course, we will use a mature Coq library, "The Mathematical
 Components Library" which will provide us with a rich theory on data
 types and mathematics. *)
 
-From mathcomp Require Import all_ssreflect.
+(* From mathcomp Require Import all_ssreflect. *)
+
+From Coq Require Import ssreflect.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
