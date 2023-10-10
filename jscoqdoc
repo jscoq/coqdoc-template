@@ -6,8 +6,8 @@ const fs = require('fs'),
       chld = require('child-process-promise');
 
 const JSCOQ_URL = process.env['JSCOQ_URL'] || '.',
-      SCRIPTS = ["node_modules/wacoq/ui-js/jscoq-loader.js", "jscoq-agent.js"],
-      STYLES = ["node_modules/wacoq/ui-css/jscoqdoc.css"];
+      SCRIPTS = ["node_modules/jscoq/dist/frontend/index.js", "jscoq-agent.js"],
+      STYLES = ["node_modules/jscoq/dist/frontend/index.css", "node_modules/jscoq/frontend/classic/css/jscoqdoc.css"];
 
 const DEFAULT_TEMPLATE =`
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"

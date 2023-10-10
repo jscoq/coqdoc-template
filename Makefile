@@ -7,7 +7,7 @@ FILES_HTML=$(addsuffix .html,$(FILES))
 
 all: $(FILES_HTML)
 
-%.html: %.v %.glob
+%.html: %.v %.glob jscoqdoc
 	./jscoqdoc $<
 
 %.glob: %.v
