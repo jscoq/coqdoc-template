@@ -4,7 +4,7 @@
  * This script is adapted from the Software Foundations jsCoq build.
  * So, it may require some tweaking depending on your development and styles.
  */
-import { JsCoq, Deprettify } from './node_modules/wacoq/ui-js/index.js';
+import { JsCoq, Deprettify } from './node_modules/jscoq/dist/frontend/index.js';
 
 function jsCoqInject() {
     var b = document.body;
@@ -22,7 +22,11 @@ var jsCoqShow = location.search === '?jscoq=on' ||
                 location.search !== '?jscoq=off' && localStorage.jsCoqShow === 'true';
 
 var jscoq_ids  = ['#main > div.code, #main > div.HIDEFROMHTML > div.code'];
+
+var sp = new URLSearchParams(location.search);
+
 var jscoq_opts = {
+    backend:   sp.get('backend') || 'wa',
     layout:    'flex',
     show:      jsCoqShow,
     focus:     false,
@@ -47,8 +51,8 @@ async function jsCoqLoad() {
     page.setAttribute('tabindex', '-1');
     page.focus();
 
-    // - load and start jsCoq
-    await JsCoq.load(jscoq_opts.base_path);
+    // - load and start jsCoq, not needed in 8.17
+    // await JsCoq.load(jscoq_opts.base_path);
 
     Deprettify.REPLACES.push(   // LF,PLF define their own versions (for Imp)
         [/∨/g, '\\/'], [/∧/g, '/\\'], [/↔/g, '<->'], [/≤/g, '<='], [/≠/g, '<>'],

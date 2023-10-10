@@ -1,10 +1,8 @@
 {
   "dependencies": {
-    "wacoq": "^0.16.0",
-    "wacoq-bin": "^0.16.0",
-    "@wacoq/mathcomp": "^0.16.0",
-    "jscoq": "^0.16.0",
-    "@jscoq/mathcomp": "^0.16.0",
+    "jscoq": "^0.17.1",
+    "wacoq-deps": "^0.1.1",
+    "@jscoq/mathcomp": "^0.17.1",
     "http-server": "^14.1.0"
   }
 }

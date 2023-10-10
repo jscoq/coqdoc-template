@@ -22,7 +22,9 @@ We have customized the following files from the oficial distro:
 + custom load of packages in `jscoq-agent.js`
 + custom paths in `jscoqdoc` binary
 
-We default to the WebAssembly jsCoq version.
+We default to the WebAssembly jsCoq version, to update that set the
+`backend:` parameter in the `jscoq-agent` file to `js` or use the
+query `?backend=wa` in the jsCoq URL.
 
 You may want to tweak more stuff too.
 
