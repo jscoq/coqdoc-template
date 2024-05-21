@@ -28,6 +28,11 @@ query `?backend=wa` in the jsCoq URL.
 
 You may want to tweak more stuff too.
 
+# Licensing
+
+To simplify the use of this template, it is made available with no restrictions under the `Unlicense` license (see [`LICENSE`](LICENSE)).
+Nevertheless, users are encouraged to contribute improvements back to this repository.
+
 # TODO:
 
 - tweak CSS?
