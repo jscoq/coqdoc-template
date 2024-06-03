@@ -15,6 +15,18 @@ $ make serve # Open a web server with the jsCoq files
 Note that `make serve` doesn't need to be restarted after a regular
 `make`.
 
+# Building multiple files with the jsCoq SDK
+
+This is WIP, for now you can do:
+
+- `make coq-pkgs/my_course.coq-pkg`
+
+## TODO / Known issues
+
+- Auto-import is not working, you'll have to click on the package
+  manager
+- the jsCoq SDK cannot locate external libs, such as math-comp
+
 # Tweaks from official distro
 
 We have customized the following files from the oficial distro:
